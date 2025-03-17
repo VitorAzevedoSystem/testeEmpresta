@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "0da4d541-1e59-432c-8943-e351daa3778e",
+		"name": "Api Empresta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20955513"
+	},
+	"item": [
+		{
+			"name": "http://localhost:81/api/simulacao",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 10000,\r\n    \"instituicoes\": [\"BMG\", \"PAN\"],\r\n    \"convenios\": [\"INSS\"],\r\n    \"parcela\": 72\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/simulacao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"simulacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:81/json/taxas_instituicoes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/json/instituicoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"json",
+						"instituicoes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
